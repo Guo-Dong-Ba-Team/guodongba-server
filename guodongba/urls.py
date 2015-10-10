@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from guodongba import views as main_views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', main_views.home_page),
+    url(r'^index/$', main_views.home_page),
+    url(r'^about/$', main_views.about),
+    url(r'^contact/$', main_views.contact),
+    url(r'^register/$', main_views.register),
+    url(r'^login/$', main_views.login),
+    url(r'^getpass/$', main_views.getpass),
+
 ]

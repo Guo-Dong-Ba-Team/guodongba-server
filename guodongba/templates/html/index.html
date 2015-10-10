@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>果冻网主页</title>
+{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/jquery.fullPage.css" %}">
+  <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/component.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/demo.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/icons.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/normalize.css"> -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery.fullPage.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/index.js" %}"></script>
+	<!-- // <script type="text/javascript" src="../sidebar/js/classie.js"></script> -->
+	<!-- // <script type="text/javascript" src="../sidebar/js/modernizr.custom.js"></script> -->
+	<!-- // <script type="text/javascript" src="../sidebar/js/sidebarEffects.js"></script> -->
+</head>
+<body>
+<!-- 导航部分开始 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container">
+      <!-- 自适应布局 -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>   
+          <a class="navbar-brand" href="/index/">果动网</a>
+        </div>
+        <!-- 自适应布局结束 -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/index/">主页</a></li>
+            <li><a href="/about/" >关于我们</a></li>
+            <li><a href="/contact/" >加入我们</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#badminton">羽毛球馆</a></li>
+                <li><a href="#swimming">游泳馆</a></li>
+                <li><a href="#basketball">篮球馆</a></li>
+                <li><a href="#billiards">台球馆</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">敬请期待</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <ul class="nav navbar-nav navbar-right re-log">
+        		<li><a href="/register/" class="navbar-link" target="blank">注册</a></li>
+        		<li><a href="/login/" class="navbar-link" target="blank">登录</a></li>
+        	</ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+ <!-- 导航部分结束 -->
+
+ <!-- 侧边栏 -->
+<!-- /st-pusher -->
+ 	  <div id="st-trigger-effects" class="column ">
+		  <button data-effect="st-effect-1" class="btn btn-primary findmore">发现更多..</button>
+	 </div>
+  
+
+    <!-- 羽毛球部分 -->
+<div class="item_container" id="badminton"><label class="index">羽毛球馆</label>
+	<!-- Tab索引部分开始 -->
+    	<div class="tab-container">
+    	   <ul id="myTab_bad" class="nav nav-tabs" role="tablist">
+		        <li class="active"><a href="#popularVenues_bad" data-toggle="tab" role="tab">
+			         热门场地</a>
+		        </li>
+				<li><a href="#goodSeller_bad" data-toggle="tab" role="tab">好评商家</a></li>
+				<li><a href="#someVenues_bad" data-toggle="tab" role="tab">随机推荐</a></li>
+			</ul>
+		</div>
+	<!-- Tab索引部分结束 -->
+
+
+	<!-- Tab内容部分 -->
+		<div class="tab-content">
+<!-- 热门场地 -->
+		<div class="tab-pane fade in active" id="popularVenues_bad">	
+			<div id="myCarousel_bad" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   				<ol class="carousel-indicators">
+     				 <li data-target="#myCarousel_bad" data-slide-to="0" 
+        			 class="active"></li>
+      				<li data-target="#myCarousel_bad" data-slide-to="1"></li>
+      				<li data-target="#myCarousel_bad" data-slide-to="2"></li>
+   				</ol>   
+   <!-- 轮播（Carousel）项目 -->
+   			<div class="carousel-inner">
+      			<div class="item active">
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
+      			</div>
+   			</div>
+   <!-- 轮播（Carousel）导航 -->
+   			<a class="carousel-control left" href="#myCarousel_bad" 
+      	data-slide="prev">&lsaquo;</a>
+   			<a class="carousel-control right" href="#myCarousel_bad" 
+      	data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+<!-- 热门场地部分结束 -->
+
+	<!-- 好评商家 部分开始 -->
+		<div class="tab-pane fade" id="goodSeller_bad">	
+			
+		</div>
+	<!-- 好评商家部分结束 -->
+
+	<!-- 一些场地展示部分开始 -->
+		<div class="tab-pane fade" id="someVenues_bad">
+		
+		</div>
+	<!-- 一些场地展示部分结束 -->
+
+
+		</div>
+	<!-- Tab内容部分结束 -->
+  </div>
+
+	<!-- 游泳馆 -->
+	<div class="item_container" id="swimming"><label class="index">游泳馆</label>
+	<!-- Tab索引部分开始 -->
+    	<div class="tab-container">
+    	   <ul id="myTab_swm" class="nav nav-tabs" role="tablist">
+		        <li class="active"><a href="#popularVenues_swm" data-toggle="tab" role="tab">
+			         热门场地</a>
+		        </li>
+				<li><a href="#goodSeller_swm" data-toggle="tab" role="tab">好评商家</a></li>
+				<li><a href="#someVenues_swm" data-toggle="tab" role="tab">随机推荐</a></li>
+			</ul>
+		</div>
+	<!-- Tab索引部分结束 -->
+
+
+	<!-- Tab内容部分 -->
+		<div class="tab-content">
+<!-- 热门场地 -->
+		<div class="tab-pane fade in active" id="popularVenues_swm">	
+			<div id="myCarousel_swm" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   				<ol class="carousel-indicators">
+     				 <li data-target="#myCarousel_swm" data-slide-to="0" 
+        			 class="active"></li>
+      				<li data-target="#myCarousel_swm" data-slide-to="1"></li>
+      				<li data-target="#myCarousel_swm" data-slide-to="2"></li>
+   				</ol>   
+   <!-- 轮播（Carousel）项目 -->
+   			<div class="carousel-inner">
+      			<div class="item active">
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
+      			</div>
+   			</div>
+   <!-- 轮播（Carousel）导航 -->
+   			<a class="carousel-control left" href="#myCarousel_swm" 
+      	data-slide="prev">&lsaquo;</a>
+   			<a class="carousel-control right" href="#myCarousel_swm" 
+      	data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+<!-- 热门场地部分结束 -->
+
+	<!-- 好评商家 部分开始 -->
+		<div class="tab-pane fade" id="goodSeller_swm">	
+			
+		</div>
+	<!-- 好评商家部分结束 -->
+
+	<!-- 一些场地展示部分开始 -->
+		<div class="tab-pane fade" id="someVenues_swm">
+		
+		</div>
+	<!-- 一些场地展示部分结束 -->
+
+
+		</div>
+	<!-- Tab内容部分结束 -->
+</div>
+
+<!-- 篮球馆 -->
+<div class="item_container" id="basketball"><label class="index">篮球馆</label>
+	<!-- Tab索引部分开始 -->
+    	<div class="tab-container">
+    	   <ul id="myTab_bak" class="nav nav-tabs" role="tablist">
+		        <li class="active"><a href="#popularVenues_bak" data-toggle="tab" role="tab">
+			         热门场地</a>
+		        </li>
+				<li><a href="#goodSeller_bak" data-toggle="tab" role="tab">好评商家</a></li>
+				<li><a href="#someVenues_bak" data-toggle="tab" role="tab">随机推荐</a></li>
+			</ul>
+		</div>
+	<!-- Tab索引部分结束 -->
+
+
+	<!-- Tab内容部分 -->
+		<div class="tab-content">
+<!-- 热门场地 -->
+		<div class="tab-pane fade in active" id="popularVenues_bak">	
+			<div id="myCarousel_bak" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   				<ol class="carousel-indicators">
+     				 <li data-target="#myCarousel_bak" data-slide-to="0" 
+        			 class="active"></li>
+      				<li data-target="#myCarousel_bak" data-slide-to="1"></li>
+      				<li data-target="#myCarousel_bak" data-slide-to="2"></li>
+   				</ol>   
+   <!-- 轮播（Carousel）项目 -->
+   			<div class="carousel-inner">
+      			<div class="item active">
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
+      			</div>
+   			</div>
+   <!-- 轮播（Carousel）导航 -->
+   			<a class="carousel-control left" href="#myCarousel_bak" 
+      	data-slide="prev">&lsaquo;</a>
+   			<a class="carousel-control right" href="#myCarousel_bak" 
+      	data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+<!-- 热门场地部分结束 -->
+
+	<!-- 好评商家 部分开始 -->
+		<div class="tab-pane fade" id="goodSeller_bak">	
+			
+		</div>
+	<!-- 好评商家部分结束 -->
+
+	<!-- 一些场地展示部分开始 -->
+		<div class="tab-pane fade" id="someVenues_bak">
+		
+		</div>
+	<!-- 一些场地展示部分结束 -->
+
+
+		</div>
+	<!-- Tab内容部分结束 -->
+</div>
+
+
+<!-- 台球馆 -->
+<div class="item_container" id="billiards"><label class="index">台球馆</label>
+	<!-- Tab索引部分开始 -->
+    	<div class="tab-container">
+    	   <ul id="myTab_bil" class="nav nav-tabs" role="tablist">
+		        <li class="active"><a href="#popularVenues_bil" data-toggle="tab" role="tab">
+			         热门场地</a>
+		        </li>
+				<li><a href="#goodSeller_bil" data-toggle="tab" role="tab">好评商家</a></li>
+				<li><a href="#someVenues_bil" data-toggle="tab" role="tab">随机推荐</a></li>
+			</ul>
+		</div>
+	<!-- Tab索引部分结束 -->
+
+
+	<!-- Tab内容部分 -->
+		<div class="tab-content">
+<!-- 热门场地 -->
+		<div class="tab-pane fade in active" id="popularVenues_bil">	
+			<div id="myCarousel_bil" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   				<ol class="carousel-indicators">
+     				 <li data-target="#myCarousel_bil" data-slide-to="0" 
+        			 class="active"></li>
+      				<li data-target="#myCarousel_bil" data-slide-to="1"></li>
+      				<li data-target="#myCarousel_bil" data-slide-to="2"></li>
+   				</ol>   
+   <!-- 轮播（Carousel）项目 -->
+   			<div class="carousel-inner">
+      			<div class="item active">
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
+      			</div>
+      			<div class="item">
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
+      			</div>
+   			</div>
+   <!-- 轮播（Carousel）导航 -->
+   			<a class="carousel-control left" href="#myCarousel_bil" 
+      	data-slide="prev">&lsaquo;</a>
+   			<a class="carousel-control right" href="#myCarousel_bil" 
+      	data-slide="next">&rsaquo;</a>
+			</div>
+		</div>
+<!-- 热门场地部分结束 -->
+
+	<!-- 好评商家 部分开始 -->
+		<div class="tab-pane fade" id="goodSeller_bil">	
+			
+		</div>
+	<!-- 好评商家部分结束 -->
+
+	<!-- 一些场地展示部分开始 -->
+		<div class="tab-pane fade" id="someVenues_bil">
+		
+		</div>
+	<!-- 一些场地展示部分结束 -->
+
+
+		</div>
+	<!-- Tab内容部分结束 -->
+</div>
+    
+<!-- footer部分 -->
+<footer class="footer">
+    <div class="container">
+    	版权所有:<span style="font-family:arial;">Copyright &copy;2015 果动网</span>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body{
+	padding-top: 70px;
+	text-align: center;
+}
+.tab-container{
+	margin-top: 50px;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+.re-log{
+	margin-left: 500px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.carousel-inner > .item > a > img{
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+}
+.slide{
+	width: 500px;
+	height: 300px;
+	margin: 50px auto;
+}
+label.index{
+	margin-right: 900px;
+	text-align: center;
+	font-size: 40px;
+	line-height: 130px;
+	width: 200px;
+	height: 100px;
+	margin-top: 50px;
+}
+.column{
+	width: 100px;
+	height: 40px;
+}
+button.findmore{
+	text-align: left;
+	margin-right: 1240px;
+}
+#myTab_bad{
+	height: 41px;
+}
+.item_container{
+	width: 1000px;
+	height: 700px;
+	margin: 50px auto;
+	border: 1px;
+	border-style: outset;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+footer > div.container{
+	height: 100px;
+}
+

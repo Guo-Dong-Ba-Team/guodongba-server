@@ -1,0 +1,102 @@
+
+body{
+	padding-top: 70px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.re-log{
+	margin-left: 500px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.titles{
+	width: 500px;
+	height: 55px;
+}
+
+.titles li{
+	padding: 0;
+	position: relative;
+	margin-top: 30px;
+	margin-left: 40px;
+	list-style: none;
+	float: left;
+	width: 200px;
+	height: 50px;
+	line-height: 25px;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.titles li a{
+	border-top: 1px solid #D8D8D8;
+	border-right: 1px solid #D8D8D8;
+	border-left: 1px solid #D8D8D8;
+}
+.register{
+	width: 1000px;
+	height: 700px;
+	border-style: outset;
+	border-width: 1px;
+	margin: auto;
+	margin-top: 100px;
+
+}
+
+.titles li a:link,.titles li a:visited{
+	text-decoration: none;
+	color: #000;
+}
+.titles li a:hover{
+    color: #FF0033;
+    text-decoration: none;
+}
+
+.asterisk{
+	color: red;
+	font-size: 30px;
+	line-height: 10px;
+}
+.form-control{
+	width: 250px;
+}
+
+.form-container{
+	margin-top: 100px;
+}
+#confirm{
+	margin-left: 210px;
+}
+.confirm-button{
+	float: left;
+	margin-left: 460px;
+	margin-top: -34px;
+	margin-bottom: 30px;
+}
+.checkbox{
+	width: 200px;
+	left: 190px;
+	top: 8px;
+}
+.submit{
+	top: 30px;
+	width: 120px;
+}
+.register-form{
+	height: 350px;
+}
+button .submit_button{
+	margin: auto;
+}
+.suggest{
+	width: 230px;
+	height: 50px;
+	margin-left: 670px;
+	margin-top: -400px;
+	text-align: center;
+}
+
+/*效果*/
+

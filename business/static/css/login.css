@@ -1,0 +1,47 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	padding-top: 70px;
+	text-align: left;
+}
+form.form-horizontal{
+	margin-top: 100px;
+	margin-left: 30px;
+}
+.form-container{
+	margin-top: 100px;
+	width: 500px;
+	margin-left: 550px;
+	border-width: 1px;
+	border-style: outset;
+	border-radius: 5px;
+	height: 450px;
+}
+.form-control{
+	width: 250px;
+}
+div.title{
+	height: 35px;
+	/*background:#33CC99;*/
+	font-size: 25px;
+	font-style: normal;
+}
+div.logo{
+	width: 80px;
+	height: 60px;
+}
+.forget{
+	margin-left: 300px;
+	margin-top: 40px;
+}
+.register{
+	margin-left: 270px;
+	margin-top: 20px;
+}
+.logo{
+	width: 150px;
+	height: 150px;
+}
+.logo img{
+	width: 100px;
+	height: 100px;
+}
