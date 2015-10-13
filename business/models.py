@@ -6,3 +6,19 @@ class User(models.Model):
 	phone_num = models.CharField(max_length=11)
 	email = models.EmailField()
 	password = models.CharField(max_length=50)
+
+class GymInfo(models.Model):
+	owner = models.ForeignKey(User)
+	name = models.CharField(max_length=250, primary_key=True)
+	type = models.IntegerField()
+	address = models.CharField(max_length=300)
+	image = models.CharField(max_length=100)
+	open_time = models.CharField(max_length=100)
+	single_price = models.FloatField()
+	vip_price = models.FloatField()
+	discount = models.FloatField()
+	hardware_info = models.CharField(max_length=1000)
+	service_info = models.CharField(max_length=1000)
+
+	class Meta:
+		db_table = "gym_info"
