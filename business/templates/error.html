@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="出错了" />
+	<meta name="description" content="果动网" />
+
+  {% load staticfiles %}
+   {% csrf_token %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/register.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/validation.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/register.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery.validate.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/checkp.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/checkm.js" %}"></script>
+	<title>出错了</title>
+</head>
+<body>
+	<!-- 导航开始 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+      <!-- 自适应布局 -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>   
+          <a class="navbar-brand" href="/index/">果动网</a>
+        </div>
+        <!-- 自适应布局结束 -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="/index/">主页</a></li>
+            <li><a href="/about/">关于我们</a></li>
+            <li><a href="/contact/">加入我们</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">羽毛球馆</a></li>
+                <li><a href="#">乒乓球馆</a></li>
+                <li><a href="#">篮球馆</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <ul class="nav navbar-nav navbar-right re-log">
+            <li class="active"><a href="/register/" class="navbar-link">注册</a></li>
+            <li><a href="/login/" class="navbar-link">登录</a></li>
+          </ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- 导航结束 -->
+
+     <div class="container jumbotron">
+      <p>出错了，请点击导航条返回</p>  
+    </div>
+
+</body>

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>果冻网主页</title>
 {% load staticfiles %}
+ {% csrf_token %}
 	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/jquery.fullPage.css" %}">
   <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/component.css"> -->
@@ -330,6 +331,9 @@
 	<!-- Tab内容部分结束 -->
 </div>
     
+<form>
+   {% csrf_token %}
+</form>
 <!-- footer部分 -->
 <footer class="footer">
     <div class="container">

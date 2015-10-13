@@ -24,7 +24,10 @@ urlpatterns = [
     url(r'^about/$', main_views.about),
     url(r'^contact/$', main_views.contact),
     url(r'^register/$', business_views.register),
+    url(r'^register_success/$', business_views.register_success),
     url(r'^login/$', business_views.login),
+    url(r'^login_success/$', business_views.login_success),
+    url(r'^error/$', business_views.error),
     url(r'^getpass/$', main_views.getpass),
 
 ]

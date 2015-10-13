@@ -114,3 +114,5 @@ STATICFILES_DIRS = (
     ("js", os.path.join(STATIC_ROOT,'js')),
     ("images", os.path.join(STATIC_ROOT,'images')),
 )
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/login_success/'
