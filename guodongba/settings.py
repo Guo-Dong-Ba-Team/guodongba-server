@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'guodongba',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'guodongba',
+        'PASSWORD': '',
         'PORT': '',
     }
 }

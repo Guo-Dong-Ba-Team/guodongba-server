@@ -6,6 +6,8 @@ from django.template import RequestContext
 from business.forms import *
 from business.models import * 
 
+# image is necessary. first pip install image
+import image
 
 def register(request):
 	if request.method == "POST":
@@ -57,7 +59,8 @@ def login(request):
 			return HttpResponseRedirect('/login_success/')
 	else:
 		form = LoginForm()
-	return render_to_response('registration/login.html', {'form': form, 'errors': errors}, context_instance=RequestContext(request))
+	return render_to_response('registration/login.html', 
+		{'form': form, 'errors': errors}, context_instance=RequestContext(request))
 
 
 def register_success(request):
@@ -68,3 +71,32 @@ def login_success(request):
 
 def error(request):
 	return render_to_response('error.html')
+
+def handle_upload_file(f):
+	# this path can be any path, but subdirs must have been existed!
+	with open('name.txt', 'wb+') as destination:
+		for chunk in f.chunks():
+			destination.write(chunk)
+
+def handle_upload_image(f):
+	# this path can be any path, but subdirs must have been existed!
+	with open('name.jpg', 'wb+') as destination:
+		for chunk in f.chunks():
+			destination.write(chunk)
+			
+def upload(request):
+	if request.method == "POST":
+		form = UploadFileForm(request.POST, request.FILES)
+		if form.is_valid():
+			handle_upload_file(request.FILES['file'])
+			handle_upload_image(request.FILES['image'])
+			HttpResponseRedirect('/index/')
+	else:
+		form = UploadFileForm()
+
+	return render_to_response("upload.html", {'form': form}, context_instance=RequestContext(request))	
+
+
+
+
+	

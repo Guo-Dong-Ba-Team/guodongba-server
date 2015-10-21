@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^login_success/$', business_views.login_success),
     url(r'^error/$', business_views.error),
     url(r'^getpass/$', main_views.getpass),
+    url(r'^upload/$', business_views.upload),
 
 ]

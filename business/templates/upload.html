@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+      <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+	<title>上传文件测试</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+      <!-- 自适应布局 -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>   
+          <a class="navbar-brand" href="/index/">果动网</a>
+        </div>
+        <!-- 自适应布局结束 -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="/index/">主页</a></li>
+            <li><a href="/about/">关于我们</a></li>
+            <li><a href="/contact/">加入我们</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">羽毛球馆</a></li>
+                <li><a href="#">乒乓球馆</a></li>
+                <li><a href="#">篮球馆</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+   <!-- <div class="logo">
+      <img src="../images/logo.png">
+    </div>  -->
+
+
+	<!-- <div class="logo"><img src="../images/logo01.jpeg"></div> -->
+    <!-- 登录表单部分 -->
+    <div class="container form-container">
+    <form enctype="multipart/form-data" method="post" >
+    {% csrf_token %}
+    {{ form }}
+      <button type="submit" class="btn btn-primary">上传</button>
+    </form>
+    </div>	
+<!-- 找回密码部分结束 -->
+</body>
+</html>
