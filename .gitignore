@@ -1,3 +1,5 @@
 *.pyc
 media/
 guodongba/images/
+**/__pycache__/
+**/migrations/
