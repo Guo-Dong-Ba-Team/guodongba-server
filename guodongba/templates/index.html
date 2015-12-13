@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+	{% load staticfiles %}
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="keywords" content="果动网，在线预定场地" />
+    <meta name="subject" content="运动、运动场地预定">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>果动网</title>
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicons -->
+	<link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static "img/iconfont-dong.png" %}" />
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static "img/iconfont-dong-72x72.png" %}" />
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static "img/iconfont-dong-114x114.png" %}" />
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static "img/iconfont-dong-144x144.png" %}" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" href="{% static "css/flexslider.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/animate.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/supersized.css" %}" media="screen" />
+
+	<!-- Add custom CSS here -->
+	<link href="{% static "css/custom.css" %}" rel="stylesheet">
+	<!-- JavaScript Files -->
+	<script src="{% static "js/jquery.js" %}"></script>
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<script src="{% static "js/jquery.easing.min.js" %}"></script>
+	<script src="{% static "js/jquery.mixitup.min.js" %}"></script>
+	<script src="{% static "js/jquery.flexslider.js" %}"></script>
+	<script src="{% static "js/supersized.3.2.7.min.js" %}"></script>
+	<script src="{% static "js/jquery.animateNumber.js" %}"></script>
+	<script src="{% static "js/jquery.appear.js" %}"></script>
+	<script src="{% static "js/animations.js" %}"></script>
+	<script src="{% static "js/jquery.stellar.min.js" %}"></script>
+	<script src="{% static "js/main.js" %}"></script>   <!--里面有背景图片-->
+
+	<!--[if lt IE 9]>
+      	<script src="{% static "js/html5shiv.js" %}"></script>
+	      <script src="{% static "js/respond.js" %}"></script>
+	<![endif]-->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom"  onLoad="$('#num').val(1);">
+
+
+<!-- Copyright ? 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+
+
+<div class="body">
+
+<!-- Header -->
+<header>
+	 
+	<nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container">
+      <!-- 自适应布局 -->
+        <div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+				<i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand" href="#page-top">
+				<i class="iconfont"></i><div class="logozi"><b> 果动网</b><br><i></i></div>
+				</a>
+			</div>
+        <!-- 自适应布局结束 -->
+         <div id="navbar" class="navbar-collapse collapse navbar-main-collapse top-menu">
+          <ul class="nav navbar-nav">
+            <!-- <li class="page-scroll active"><a href="#home.html">主页</a></li> -->
+            <li class="page-scroll"><a href="/index#home" >关于我们</a></li>
+            <li class="page-scroll"><a href="/index#team" >团队介绍</a></li>
+            <li class="page-scroll"><a href="/index#testimonials" >入驻商家</a></li>
+            <li class="page-scroll"><a href="/index#contact" >联系我们</a></li>
+            <li class="page-scroll"><a href="/index#download" >手机客户端下载</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#badminton">羽毛球馆</a></li>
+                <li><a href="#swimming">游泳馆</a></li>
+                <li><a href="#basketball">篮球馆</a></li>
+                <li><a href="#billiards">台球馆</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">敬请期待</li>
+                <li><a href="#">其他场馆1</a></li>
+                <li><a href="#">其他场馆2</a></li>
+              </ul>
+            </li>
+            <ul class="nav navbar-nav navbar-right re-log">
+        		<li class="page-scroll"><a href="/register" class="navbar-link" target="blank">注册</a></li>
+        		<li class="page-scroll"><a href="/login" class="navbar-link" target="blank">登录</a></li>
+        	</ul>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</header>
+<!-- Header -->
+
+<!-- Intro top content -->
+<section class="intro" id="home">
+	<div class="cover"></div>
+	<div class="intro-body">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 animated text-slide">
+					<div id="intro-slider" class="flexslider">
+						<ul class="slides">
+							<li>
+								<h3 class="brand-heading">标题</h3>
+								<div class="line"></div>
+								<p class="intro-text yah">内容</p>
+							</li>
+							<li>
+								<h3 class="brand-heading">标题2</h3>
+								<div class="line"></div>
+								<p class="intro-text yah">内容</p>
+							</li>
+                            <li>
+								<h3 class="brand-heading">标题3</h3>
+								<div class="line"></div>
+								<p class="intro-text yah">内容</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Intro top content -->
+
+<!-- Welcome content -->
+<section class="welcome-content">
+	<div class="container"  style="height:300px">
+		<div class="row">
+			<div class="col-md-12 welcome-text animated">
+				<h3>欢迎加入果动网</h3>
+				
+				<div id="about_summerize"><p><span class="yahei">具体内容</span><br/>总结语</p>
+					<button class="btn1" id="about_modal_button" style="background-color:white">更多</button>
+				</div>
+				<div class="model" id="about_modal" z-index=1 style="position:absolute;top:25px;left:294px" hidden="hidden">
+   					<div class="modal-dialog">
+      					<div class="modal-content">
+         					<div class="modal-header">
+            					<h3 class="modal-title" id="myModalLabel">关于我们</h3>
+         					</div>
+         					<div class="modal-body" style="height:180px">
+         						<p style="margin-top:5px">我们是来自中国科学技术大学的一群敢于改变世界，创造未来的青年！
+         						</p>
+         					</div>
+         					<div class="modal-footer">
+            					<button type="button" class="btn btn-default modal_close" >关闭
+            					</button>
+            				</div>
+      					</div><!-- /.modal-content -->
+					</div><!-- /.modal -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Welcome content -->
+
+<!-- Facts content -->
+<section class="facts-content" id="facts" data-slide="1" data-stellar-background-ratio="0.5">
+	<div class="cover"></div>
+	<div class="container">
+		<div class="row">
+			<h3>Some fun facts <span class="yah">历程</span></h3>
+			<div class="col-md-3 fact-info animated">
+				<h4><em id="lines">0</em> <span>特色一</span></h4>
+				<div class="line2"></div>
+				<p class="yah">内容</p>
+			</div>
+			<div class="col-md-3 fact-info animated">
+				<h4><em id="lines1">0</em> <span>特色二</span></h4>
+				<div class="line2"></div>
+				<p class="yah">内容</p>
+			</div>
+			<div class="col-md-3 fact-info animated">
+				<h4><em id="lines2">0</em> <span>特色三</span></h4>
+				<div class="line2"></div>
+				<p class="yah">内容</p>
+			</div>
+			<div class="col-md-3 fact-info animated">
+				<h4><em id="lines3">0</em> <span>用户</span></h4>
+				<div class="line2"></div>
+				<p class="yah">内容</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Facts content -->
+
+<!-- Team content -->
+<section class="team-content" id="team">
+	<div class="container">
+		<div class="row">
+			<div class="fade-text animated">
+				<h3>我们的团队</h3>
+				<div class="line1"></div>
+				<p><span class="yahei">诚实，勤奋，和信任我们的核心价值观，这些特性会影响我们的业务和生活中的一切。我们真诚地欣赏我们的工作，并为我们的客户争取利益。</span><br>
+			    </p>
+			</div>
+			<div class="space90"></div>
+			<div class="col-md-12 no-padding">
+				<div class="col-md-3 staff-content animated">
+					<div class="staff-img">
+						<img src="{% static "demo/team/1.jpg" %}" class="img-responsive" alt=""/>
+					</div>
+					<h4>姓名<span>职位</span></h4>
+				</div>
+				<div class="col-md-3 staff-content animated">
+					<div class="staff-img">
+						<img src="{% static "demo/team/2.jpg" %}" class="img-responsive" alt=""/>
+					</div>
+					<h4>姓名<span class="yah">职位</span></h4>
+				</div>
+				<div class="col-md-3 staff-content animated">
+					<div class="staff-img">
+						<img src="{% static "demo/team/3.jpg" %}" class="img-responsive" alt=""/>
+					</div>
+					<h4>姓名<span>职位</span></h4>
+				</div>
+				<div class="col-md-3 staff-content animated">
+					<div class="staff-img">
+						<img src="{% static "demo/team/4.jpg" %}" class="img-responsive" alt=""/>
+					</div>
+					<h4>姓名 <span>职位</span></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Team content -->
+
+<!-- Services content -->
+
+<!-- Services content -->
+
+<!-- Portfolio content -->
+
+<!-- Portfolio content -->
+
+<!-- Testimonial content -->
+<section class="testimonial-wrap" id="testimonials" data-slide="3" data-stellar-background-ratio="0.5">
+	<div class="cover"></div>
+	<div class="container">
+		<div class="row">
+			<div class="fade-text animated">
+				<h3>已经加入的商家</h3>
+			</div>
+			<div class="col-md-12 quote-slide animated">
+				<div id="quote-slider" class="flexslider">
+					<ul class="slides">
+						<li data-thumb="{% static "demo/quote/1.png" %}">
+							<img src="{% static "demo/quote/client2.jpg" %}" class="client-img" alt=""/>
+							<div class="sign">姓名 <span>职位</span></div>
+							<p>介绍</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12 quote-slide animated">
+				<div id="quote-slider" class="flexslider">
+					<ul class="slides">
+						<li data-thumb="{% static "demo/quote/3.jpg" %}">
+							<img src="{% static "demo/quote/3.jpg" %}" class="client-img" alt=""/>
+							<div class="sign">姓名 <span>职位</span></div>
+							<p>介绍</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Testimonial content -->
+
+<!-- Contact content -->
+<section class="contact-wrap" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="fade-text animated">
+			<h3>联系我们</h3>
+				<div class="line1"></div>
+				<p><span class="yahei">没有什么让我们喜欢卷起衣袖，开始一个全新的项目。让我们一起做一些伟大的事情。<br>
+				</span>There’s nothing we like more than rolling up our sleeves and starting a brand new project. Let’s make something great together.</p>
+			</div>
+			<div class="space80"></div>
+			<div class="col-md-12 no-padding">
+				<div class="col-md-4 contact-info animated">
+					<h5><i class="fa fa-phone"></i> Telephone</h5>
+					<p>电话号码</p>
+				</div>
+				<div class="col-md-4 contact-info animated">
+					<h5><i class="fa fa-map-marker"></i> Address</h5>
+					<p>USTC<br>University of Science and Technology of China<br>
+					<span class="yahei">中国科学技术大学</span></p>
+				</div>
+				<div class="col-md-4 contact-info animated">
+					<h5 class="qq_email"><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ckpCQ0VLS0RAMgMDXBEdHw" style="text-decoration:none;"><i class="fa fa-envelope-o"></i> Email<span class="yah">给我</span></a></h5>
+					<p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Contact content -->
+
+<!-- 手机客户端下载 -->
+<section class="download-wrap" id="download">
+	<div class="container">
+		<div class="row">
+			<div class="fade-text animated">
+				<h3><img src="{% static "img/qrcode1.png" %}" width="152" height="152" alt="果动吧">
+				<span></span>
+				<img src="{% static "img/qrcode2.png" %}" width="152" height="152" alt="果动吧">
+				<span></span>
+				<img src="{% static "img/qrcode3.png" %}" width="152" height="152" alt="果动吧"></h3>
+			</div>
+			<div class="col-md-12 no-padding" style="left:600px">
+				<div class="col-md-4 contact-info animated">
+					<h5><i class="fa fa-phone"></i> 扫二维码即刻下载客户端APP<br><br>
+					如果您是<b>商家</b>，<a href="/register">点击这里</a>即可立即注册</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 手机客户端下载 -->
+
+<!-- Footer content -->
+<footer>
+	<ul class="social yah">果动网</UL>
+	<p class="copy">&copy; 2015—GUO_DONG_BA&nbsp;&nbsp;</p>
+	
+</footer>
+<!-- Footer content -->
+
+</div>
+
+
+
+<script type="text/javascript">
+function showMK(){
+	var num = $("#num").val();
+	$("#MK_"+num).css('display','block');
+	if(num == '3'){
+		$("#more").css('display','none');
+	}else{
+		$("#num").val(parseInt(num) + 1);
+	}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+{% extends 'admin_base.html' %}
+{% load staticfiles%}
+{% block title %}
+    订单管理
+{% endblock %}
+
+{% block main %}
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        订单管理
+                        <small>页面</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="/business/admin/"><i class="fa fa-dashboard"></i> 首页</a></li>
+                        <li class="active">订单管理</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+                    <h4 class="page-header">
+                        快来及时查看订单吧
+                        <small>及时核对<b><span style="color:red">未消费</span></b>订单，让您的管理有条不紊</small>
+                    </h4>
+
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                    <!-- 累计订单数 -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-blue">
+                                <div class="inner">
+                                    <h3 id="tody_form_number">
+                                        {{ all_order_num }}
+                                    </h3>
+                                    <p>
+                                        累计宗订单数
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-ios7-cart-outline"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    <i class="fa"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                    <!-- 累计订单数 -->
+
+                    <!-- 今日新的订单 -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-teal">
+                                <div class="inner">
+                                    <h3 id="tody_form_number">
+                                       {{ today_order_num }} 
+                                    </h3>
+                                    <p>
+                                        今日总订单数
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-ios7-alarm-outline"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    <i class="fa "></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                    <!-- 今日新的订单 -->
+
+                    <!-- 未消费订单 -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-maroon">
+                                <div class="inner">
+                                    <h3 id="unconsume_form_number">
+                                      {{ unused_order_num }} 
+                                    </h3>
+                                    <p>
+                                        未消费订单数
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-ios7-pricetag-outline"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                    <!-- 未消费订单 -->
+
+                    </div><!-- /.row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box" style="width:700px">
+                                <div class="box-header">
+                                    <h3 class="box-title">订单预览</h3>
+                                </div><!-- /.box-header -->
+                                {% if all_order_list %}
+                                <div class="box-body">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th style="width: 150px">时间</th>
+                                            <th>预定账户</th>
+                                            <th>预订场馆</th>
+                                            <th style="width: 40px">状态</th>
+                                        </tr>
+                                        {% for order_tuple in all_order_list %}
+                                            {% for order in order_tuple %}
+                                            <tr>
+                                                <td id="time">{{ order.4 }}</td>
+                                                <td id="account">{{ order.1 }}</td>
+                                                <td id="gym_type">{{ order.2 }}</td>
+                                                {% ifequal order.6  1%}
+                                                    <td id="status"><span class="badge bg-red">未消费</span></td>
+                                                {% else %}
+                                                    <td id="status"><span class="badge bg-green">已消费</span></td>
+                                                {% endifequal %}
+                                            {% endfor %}
+                                        {%endfor%}
+                                        </tr>
+                                       
+                                    </table>
+                                </div><!-- /.box-body -->
+                                {% else %}
+                                    <p>暂无订单</p>
+                                {% endif %}
+                                <div class="box-footer clearfix">
+                                    <ul class="pagination pagination-sm no-margin pull-right">
+                                        <li><a href="#">&laquo;</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- /.box -->
+                        </div><!-- /.col -->
+                    </div>
+
+                                     
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+
+  {% endblock %}  

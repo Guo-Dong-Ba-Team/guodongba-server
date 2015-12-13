@@ -1,0 +1,120 @@
+{% extends 'admin_base.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        {% block h1 %}
+                        {% endblock %}
+                        <small>页面</small>
+                        
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="/business/admin/"><i class="fa fa-dashboard"></i> 主页</a></li>
+                        <li class="active">
+                            {% block active %}
+                                添加..
+                            {% endblock %}
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+                    <!-- START ALERTS AND CALLOUTS -->
+                    <h2 class="page-header">设置场馆规格和信息</h2>
+                    <div class="col-md-6" style="left:180px">
+                            <!-- general form elements disabled -->
+                            <div class="box box-warning">
+                                <div class="box-header">
+                                    <h3 class="box-title">场馆信息</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                    <form enctype="multipart/form-data" role="form" method="post">
+                                     {% csrf_token %}
+                                        <!-- text input -->
+                                        <div class="form-group" style="margin-bottom:35px">
+                                            <label>自定义名称</label>
+                                            <input type="text" class="form-control" id="gym_name" name="gym_name" placeholder="为了方便,您可以自定义场馆名称"/>
+                                        </div>
+                                         <div class="form-group" style="margin-bottom:35px">
+                                            <label>场地价格 只填写数字，如12</label>
+                                            <input type="text" class="form-control" id="gym_single_price" name="gym_single_price" placeholder="场地每小时价格，只填写数字，如12"/>
+                                        </div>
+                                         <div class="form-group" style="margin-bottom:35px">
+                                            <label>场馆开放时间 请写24小时制，如08:00-22:00</label>
+                                            <input type="text" class="form-control" id="gym_open_time" name="gym_open_time" placeholder="请写24小时制，如08:00-22:00"/>
+                                        </div>
+                                         <div class="form-group" style="margin-bottom:35px">
+                                            <label>场馆规格 请输入场馆包含的小场地数目，如8</label>
+                                              <input type="text" class="form-control" id="gym_field_num" name="gym_field_num" placeholder="请输入场馆包含的小场地数目，如8"/>
+                                        </div>
+                                         <div class="form-group" style="margin-bottom:35px">
+                                            <label for="exampleInputFile">场地图片</label>
+                                            <input type="file" id="exampleInputFile" name="gym_img">
+                                            <p class="help-block">支持jpg、png、jpeg格式文件</p>
+                                        </div>
+
+                                        <div class="form-group" id="city" style="margin-bottom:35px"> 
+                                            <label for="address">地址</label><br/>
+                                            <select class="prov" id="gym_prov" name="gym_prov"></select>  
+                                            <select class="city" id="gym_city" name="gym_city" disabled="disabled"></select> 
+                                            <select class="dist" id="gym_dist" name="gym_dist" disabled="disabled"></select> 
+                                        </div> 
+                                        
+
+                                        <!-- textarea -->
+                                         <div class="form-group">
+                                            <label>场馆服务信息 </label>
+                                            <textarea class="form-control" id="gym_service" name="gym_service" rows="3" placeholder="请输入场馆详细的服务信息"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>场馆硬件信息 </label>
+                                            <textarea class="form-control" id="gym_hardware" name="gym_hardware" rows="3" placeholder="请输入场馆详细的硬件信息"></textarea>
+                                        </div>
+                                         <div class="form-group">
+                                            <label>备注说明</label>
+                                            <textarea class="form-control" id="gym_remark" name="gym_remark" rows="3" placeholder="Enter ..."></textarea>
+                                        </div>
+                                        <!-- input states -->
+                                       <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-primary">立即添加</button>
+                                            </div>
+                                        </div> 
+
+
+                                    </form>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                    </div><!--/.col (right) -->
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+    {% endblock %}
+     {% block custom_static_footer %}
+            <!-- jQuery 2.0.2 -->
+        <script src="{% static "admin_pages_js/jquery.min.js" %}"></script>
+        <!--城市选择 -->
+        <script type="text/javascript" src="{% static "admin_pages_js/jquery.cityselect.js" %}"></script>
+        <script type="text/javascript">
+        $(function(){
+            $("#city").citySelect({
+            url:"{% static "admin_pages_js/city.min.js" %}", 
+            prov:"安徽", //省份 
+            city:"合肥", //城市 
+            dist:"", //区县  
+            nodata:"none"
+            }); 
+        });
+        </script>
+
+    {% endblock %}

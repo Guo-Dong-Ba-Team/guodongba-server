@@ -1,75 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="登录成功" />
-	<meta name="description" content="果动网帐户中心服务" />
-
   {% load staticfiles %}
-   {% csrf_token %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/register.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/validation.css" %}">
-	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/register.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/jquery.validate.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/checkp.js" %}"></script>
-	<script type="text/javascript" src="{% static "js/checkm.js" %}"></script>
-	<title>登录成功</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static "img/iconfont-dong.png" %}" />
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static "img/iconfont-dong-72x72.png" %}" />
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static "img/iconfont-dong-114x114.png" %}" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static "img/iconfont-dong-144x144.png" %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+  <link rel="stylesheet" href="{%  static "font-awesome/css/font-awesome.min.css" %}">
+  <link href="{% static "css/custom.css" %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+  <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+  <script type="text/javascript" src="{%  static "js/bootstrap.js" %}"></script>
+  <title>登录成功</title>
 </head>
 <body>
-	<!-- 导航开始 -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+  <!-- Header -->
+<header>
+   
+  <nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container">
       <!-- 自适应布局 -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>   
-          <a class="navbar-brand" href="/index/">果动网</a>
-        </div>
+        <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/index#page-top">
+        <i class="iconfont"></i><div class="logozi"><b> 果动网</b><br><i></i></div>
+        </a>
+      </div>
         <!-- 自适应布局结束 -->
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse navbar-main-collapse top-menu">
           <ul class="nav navbar-nav">
-            <li class=""><a href="/index/">主页</a></li>
-            <li><a href="/about/">关于我们</a></li>
-            <li><a href="/contact/">加入我们</a></li>
+            <!-- <li class="page-scroll active"><a href="/home">主页</a></li> -->
+            <li class="page-scroll"><a href="/index#home" >关于我们</a></li>
+            <li class="page-scroll"><a href="/index#team" >团队介绍</a></li>
+            <li class="page-scroll"><a href="/index#testimonials" >入驻商家</a></li>
+            <li class="page-scroll"><a href="/index#contact" >联系我们</a></li>
+            <li class="page-scroll"><a href="/index#download" >手机客户端下载</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">羽毛球馆</a></li>
-                <li><a href="#">乒乓球馆</a></li>
-                <li><a href="#">篮球馆</a></li>
+                <li><a href="#badminton">羽毛球馆</a></li>
+                <li><a href="#swimming">游泳馆</a></li>
+                <li><a href="#basketball">篮球馆</a></li>
+                <li><a href="#billiards">台球馆</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li class="dropdown-header">敬请期待</li>
+                <li><a href="#">其他场馆1</a></li>
+                <li><a href="#">其他场馆2</a></li>
               </ul>
             </li>
-            <ul class="nav navbar-nav navbar-right re-log">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商家信息<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">我的场馆</a></li>
-                <li><a href="#">交易记录</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">设置</a></li>
-                <li><a href="#">退出</a></li>
-              </ul>
-            </li>
-          </ul>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <!-- 导航结束 -->
+</header>
+<!-- Header -->
      <div class="container jumbotron">
       <p>登录成功，点击进入场地管理页面</p>  
-      <a href="/login/" class="btn btn-lg btn-success">进入场地管理</a>
+      <a href="/business/admin/" class="btn btn-lg btn-success">进入场地管理</a>
     </div>
 
 </body>

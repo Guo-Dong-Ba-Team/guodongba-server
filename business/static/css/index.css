@@ -8,7 +8,7 @@ body{
 	margin-right: 150px;
 }
 .re-log{
-	margin-left: 500px;
+	margin-left: 410px;
 	font-weight: bold;
 	font-size: 20px;
 }
@@ -54,5 +54,9 @@ button.findmore{
 
 footer > div.container{
 	height: 100px;
+}
+
+li.page-scroll>a{
+	font-size: 30px;
 }
 

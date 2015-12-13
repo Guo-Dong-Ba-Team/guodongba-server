@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import os.path 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,9 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kz9rhg$mq+u%gs*lndnlr^3j5zxa7ubq4b+mjk-+9#s%dv=o!z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = False
+DEBUG = True 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','.182.61.8.185*','182.61.8.185','guodongs.com','.guodongs.com.','.guodongs.com','guodongs.com:8000','*.guodongs.com:*','*.guodongs.com']
 
 
 # Application definition
@@ -57,7 +59,12 @@ ROOT_URLCONF = 'guodongba.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['customer/templates', 'business/templates', 'guodongba/templates/html'],
+
+        'DIRS': [
+            os.path.join(BASE_DIR, 'customer/templates').replace('\\','/'), 
+            os.path.join(BASE_DIR, 'business/templates').replace('\\','/'), 
+            os.path.join(BASE_DIR, 'guodongba/templates').replace('\\','/'), 
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,11 +102,17 @@ LANGUAGE_CODE = 'zh-CN'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+#USE_I18N = True
 
-USE_L10N = True
+#USE_L10N = True
 
-USE_TZ = True
+#USE_TZ = True
+
+USE_I18N = False 
+
+USE_L10N = False 
+
+USE_TZ = False 
 
 
 # Static files (CSS, JavaScript, Images)
@@ -111,8 +124,22 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     ("css", os.path.join(STATIC_ROOT,'css')),
+    ("demo", os.path.join(STATIC_ROOT,'demo')),
+    ("fonts", os.path.join(STATIC_ROOT,'fonts')),
+    ("font-awesome", os.path.join(STATIC_ROOT,'font-awesome')),
+    ("img", os.path.join(STATIC_ROOT,'img')),
     ("js", os.path.join(STATIC_ROOT,'js')),
     ("images", os.path.join(STATIC_ROOT,'images')),
+    ("admin_ajax", os.path.join(STATIC_ROOT,'admin_ajax')),
+    ("admin_css", os.path.join(STATIC_ROOT,'admin_css')),
+    ("admin_js", os.path.join(STATIC_ROOT,'admin_js')),
+    ("admin_img", os.path.join(STATIC_ROOT,'admin_img')),
+    ("admin_less", os.path.join(STATIC_ROOT,'admin_less')),
+    ("admin_fonts", os.path.join(STATIC_ROOT,'admin_fonts')),
 )
+
+MEDIA_URL = '/images/' 
+MEDIA_ROOT = os.path.join(SITE_ROOT,'images')
+
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/login_success/'

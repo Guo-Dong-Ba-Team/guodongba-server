@@ -1,0 +1,94 @@
+{% extends 'admin_base.html' %}
+{% load staticfiles%}
+{% block title %}
+    商家个人信息 
+{% endblock %}
+
+{% block main %}
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        我的信息
+                        <small>页面</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="/business/admin/"><i class="fa fa-dashboard"></i> 主页</a></li>
+                        <li class="active">我的信息</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+              
+
+                    <!-- Main row -->
+                    <div class="row">
+                        <div class="col-md-6" style="width:1000px">
+                        <!-- 个人基本信息 -->
+                            <div class="box" style="margin-left:155px; width:750px">
+                                <div class="box-header">
+                                    <h3 class="box-title">个人基本信息</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th style="width: 10px"></th>
+                                            <th style="width: 200px">昵称</th>
+                                            <th id="nickname">{{ nickname }}</th>
+                                            <th style="width: 30px"></th>
+                                        </tr>
+                                        <tr style="font-weight:bold">
+                                            <td></td>
+                                            <td>绑定手机</td>
+                                            {% ifequal phone '00000000000' %}
+                                                <td>未绑定</td>
+                                            {% else %}
+                                                <td>{{ phone }}</td>
+                                            {% endifequal %}
+                                            <th style="width: 30px">
+                                            </th>
+                                        </tr>
+                                        <tr style="font-weight:bold">
+                                            <td></td>
+                                            <td>绑定邮箱</td>
+                                            {% ifequal email 'null@null'%}
+                                                <td>未绑定</td>
+                                            {% else %}
+                                                <td>{{ email }}</td>
+                                            {% endifequal %}
+                                            <th style="width: 30px">
+                                            </th>
+                                        </tr>
+                                        <tr style="font-weight:bold">
+                                            <td></td>
+                                            <td>头像</td>
+                                            <td><img src="{% static "admin_img/avatar3.png"  %}//"></td>
+                                            <th style="width: 30px">
+                                            </th>
+                                        </tr>
+                                        <tr style="font-weight:bold">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <th style="width: 30px"><a href="#"><button class="btn btn-info btn-sm">修改</button></a>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        <!-- 个人基本信息 -->
+                        
+                        </div>
+                    </div><!-- /.row (main row) -->
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+    {% endblock %}
+    {% block custom_static_footer %}
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="{% static "admin_js/AdminLTE/dashboard.js" %}" type="text/javascript"></script>        
+    {% endblock %}

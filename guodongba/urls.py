@@ -16,19 +16,33 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from guodongba import views as main_views
-from business import views as business_views
+from business import views as business
+from admin import views as my_admin
+from guodongba import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', main_views.home_page),
     url(r'^index/$', main_views.home_page),
-    url(r'^about/$', main_views.about),
-    url(r'^contact/$', main_views.contact),
-    url(r'^register/$', business_views.register),
-    url(r'^register_success/$', business_views.register_success),
-    url(r'^login/$', business_views.login),
-    url(r'^login_success/$', business_views.login_success),
-    url(r'^error/$', business_views.error),
-    url(r'^getpass/$', main_views.getpass),
-    url(r'^upload/$', business_views.upload),
+    url(r'^agreement/$', main_views.agreement),
+    url(r'^register/$', business.register),
+    url(r'^register_success/$', business.register_success),
+    url(r'^login/$', business.login),
+    url(r'^logout/$', business.logout),
+    url(r'^login_success/$', business.login_success),
+    url(r'^error/$', business.error),
+    url(r'^getpass/$', business.getpass),
+    url(r'^upload/$', my_admin.upload),
+    url(r'^business/admin/$', my_admin.admin_base_view,{'template_name': 'admin/index.html'}),
+    url(r'^business/admin/account/$', my_admin.admin_base_view,{'template_name': 'admin/account.html'}),
+    url(r'^business/admin/form/$', my_admin.form, {'template_name': 'admin/pages/form.html'}),
+    url(r'^business/admin/add/(?P<type>\w+)/$', my_admin.method_splitter, {'GET':my_admin.add_gym_get, 'POST':my_admin.add_gym_post,'template_name':'admin/pages/add/gym_add.html'}),
+    url(r'^business/admin/gyms/(?P<id>\d+)/$', my_admin.show_gym),
+
+    url(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT }), 
+
+
+
+
+
 
 ]
