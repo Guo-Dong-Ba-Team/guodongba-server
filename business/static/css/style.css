@@ -77,7 +77,7 @@ a:focus {
 
 .intro-page {
     padding: 150px 0 130px;
-    background:#313131 url("1.jpg") no-repeat center;
+    background:#313131 url(../demo/bg/1.jpg) no-repeat center;
     background-size: 100% auto;
 }
 
@@ -144,7 +144,7 @@ a:focus {
     z-index:1;
 }
 
-.welcome-content h3,.team-content h3, .services-content h3, .portfolio-wrap h3, .testimonial-wrap h3, .contact-wrap h3, .download-wrap h3 {
+.welcome-content h3,.team-content h3, .services-content h3, .portfolio-wrap h3, .testimonial-wrap h3, .contact-wrap h3, .download-wrap h3, .location-wrap h3 {
     color: #222222;
     text-align: center;
     font-size: 20px;
@@ -155,7 +155,7 @@ a:focus {
     text-transform: uppercase;
 }
 
-.welcome-content p, .team-content p, .services-content p, .contact-wrap p, .download-wrap p {
+.welcome-content p, .team-content p, .services-content p, .contact-wrap p, .download-wrap p, .location-wrap p {
     color: #3d3d3d;
     text-align: center;
     font-size: 13px;
@@ -203,7 +203,7 @@ a:focus {
 
 .facts-content {
     padding: 130px 0;
-    background:#313131 url("4.jpg") no-repeat center;
+    background:#313131 url(../demo/bg/4.jpg) no-repeat center;
     background-size: 100% auto;
     position: relative;
     z-index:1;
@@ -405,7 +405,7 @@ a:focus {
 
 .services-content {
     padding: 130px 0;
-    background:#313131 url("5.jpg") no-repeat center;
+    background:#313131 url(../demo/bg/5.jpg) no-repeat center;
     background-size: 100% auto;
     position: relative;
     z-index:1;
@@ -489,7 +489,7 @@ a:focus {
     font-weight: 600;
 }
 
-#filters li span.active, 	#filters li span:hover {
+#filters li span.active,    #filters li span:hover {
     border: 2px solid #222222;
 }
 
@@ -593,10 +593,20 @@ a:focus {
 
 .testimonial-wrap {
     padding: 130px 0;
-    background:#313131 url("6.jpg") no-repeat center;
+    background:#313131 url(../demo/bg/6.jpg) no-repeat center;
     background-size: 100% auto;
     position: relative;
     z-index:1;
+}
+
+.location-wrap {
+    background: #fff;
+    padding: 110px 0;
+    position: relative;
+    z-index:1;
+}
+div#map {
+   margin: 50px auto;
 }
 
 .client-img {
@@ -642,7 +652,7 @@ footer {
     padding: 0px;
     margin: 0 auto 15px;
     display: table;
-	font-family:"微软雅黑";
+    font-family:"微软雅黑";
 }
 
 .social li {
@@ -1092,7 +1102,7 @@ article .btn1 {
     .testimonial-wrap {
        background-size: 200% 200%;
     }
-	
+    
     .project-info .col-md-7 {
       margin-bottom:30px;
     }
